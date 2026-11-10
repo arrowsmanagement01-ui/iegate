@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://arrowsmanagement01-ui.github.io/iegate/sitemap.xml

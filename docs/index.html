@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      // 開いたときは常にページの先頭から表示する（URL末尾に #partners 等が付いていても途中から開かない）
+      if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; }
+      if (window.location.hash) { history.replaceState(null, '', window.location.pathname + window.location.search); }
+      window.addEventListener('load', function () { window.scrollTo(0, 0); });
+    </script>
     <script src="./config.js"></script>
     <title>富山・石川の家づくり相談窓口 IE-GATE | 合同会社アローズマネジメント</title>
     <meta name="description" content="富山県・石川県特化の注文住宅・家づくり無料中立相談窓口「IE-GATE」。北陸の気候（雪・湿気）に強い優良工務店・ハウスメーカーの比較、予算計画、長期優良住宅など最新補助金までプロが完全無料でサポート。" />
